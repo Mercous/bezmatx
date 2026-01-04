@@ -76,17 +76,17 @@ class LanguageManager {
     updateMetaTags() {
         const pageTitles = {
             'index.html': this.currentLang === 'ru' ? 
-                'Common Airwave — команда озвучки' : 
-                'Common Airwave — voice acting team',
+                'Bezmatex  — команда озвучки' : 
+                'Bezmatex — voice acting team',
             'projects.html': this.currentLang === 'ru' ? 
-                'Проекты — Common Airwave' : 
-                'Projects — Common Airwave',
+                'Проекты — Bezmatex' : 
+                'Projects — Bezmatex',
             'partners.html': this.currentLang === 'ru' ? 
-                'Сотрудничество — Common Airwave' : 
-                'Cooperation — Common Airwave',
+                'Сотрудничество — Bezmatex' : 
+                'Cooperation — Bezmatex',
             'player.html': this.currentLang === 'ru' ? 
-                'Плеер — Common Airwave' : 
-                'Player — Common Airwave'
+                'Плеер — Bezmatex' : 
+                'Player — Bezmatex'
         };
         
         const currentPage = window.location.pathname.split('/').pop();
