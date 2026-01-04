@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bezmatex — команда озвучки</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎧</text></svg>">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">BC</div>
+                    <div class="logo-text">
+                        <div class="logo-main" data-i18n="site.name">Bezmatex</div>
+                        <div class="logo-sub" data-i18n="site.tagline">команда озвучки</div>
+                    </div>
+                </a>
+                
+                <div class="nav-menu">
+                    <a href="index.html" class="nav-link active" data-i18n="nav.home">Главная</a>
+                    <a href="projects.html" class="nav-link" data-i18n="nav.projects">Проекты</a>
+                    <a href="partners.html" class="nav-link" data-i18n="nav.partners">Сотрудничество</a>
+                </div>
+                
+                <div class="nav-actions">
+                    <div class="language-switcher">
+                        <button class="language-btn" data-lang="ru">RU</button>
+                        <button class="language-btn" data-lang="en">EN</button>
+                    </div>
+                    
+                    <a href="https://t.me/Bezmatex_bot" class="telegram-btn" target="_blank">
+                        <i class="fab fa-telegram"></i>
+                        <span data-i18n="nav.telegram">Telegram</span>
+                    </a>
+                </div>
+                
+                <button class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Герой -->
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title" data-i18n="hero.title">Профессиональная озвучка с оплатой за работу</h1>
+                    <p class="hero-subtitle" data-i18n="hero.subtitle">Создаём качественные озвучки для фанфиков, комиксов и оригинальных проектов. Работаем с другими командами и оплачиваем труд чтецов.</p>
+                    
+                    <div class="hero-cta">
+                        <a href="#about" class="btn btn-primary" data-i18n="hero.btn_about">О команде</a>
+                        <a href="projects.html" class="btn btn-secondary" data-i18n="hero.btn_projects">Наши проекты</a>
+                        <a href="partners.html" class="btn btn-secondary" data-i18n="hero.btn_cooperation">Сотрудничество</a>
+                    </div>
+                </div>
+                
+                <div class="hero-avatar">
+                    <div class="avatar-container">
+                        <div class="avatar-frame">
+                            <img src="avatar.png" alt="Common Airwave" class="avatar-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- О команде -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="about.title">Команда Common Airwave</h2>
+                <p class="section-subtitle" data-i18n="about.subtitle">Профессиональная озвучка с 2023 года</p>
+            </div>
+            
+            <div class="about-content">
+                <p data-i18n="about.text">Мы специализируемся на создании качественных озвучек для различных проектов. Наша цель — строить долгосрочные отношения с другими командами озвучки и талантливыми чтецами.</p>
+                
+                <div class="about-features">
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <h3 data-i18n="feature1.title">Оплачиваем работу</h3>
+                        <p data-i18n="feature1.text">Гарантируем справедливую оплату за труд чтецов. Чёткие условия, прозрачные расчёты.</p>
+                    </div>
+                    
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 data-i18n="feature2.title">Работа с командами</h3>
+                        <p data-i18n="feature2.text">Сотрудничаем с другими командами озвучки. Совместные проекты, обмен опытом.</p>
+                    </div>
+                    
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-microphone"></i>
+                        </div>
+                        <h3 data-i18n="feature3.title">Профессиональное качество</h3>
+                        <p data-i18n="feature3.text">Опытные звукорежиссёры, качественное оборудование, внимательность к деталям.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Что мы делаем -->
+    <section class="section services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="services.title">Что мы делаем</h2>
+                <p class="section-subtitle" data-i18n="services.subtitle">Наши основные направления работы</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3 data-i18n="service1.title">Озвучка фанфиков</h3>
+                    <p data-i18n="service1.text">Работаем с произведениями по существующим вселенным. Уважаем оригинальный материал.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3 data-i18n="service2.title">Озвучка комиксов</h3>
+                    <p data-i18n="service2.text">Создаём аудиоверсии графических новелл и комиксов с учётом визуальной составляющей.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3 data-i18n="service3.title">Оригинальные проекты</h3>
+                    <p data-i18n="service3.text">Работаем с авторскими произведениями различных жанров и форматов.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3 data-i18n="service4.title">Аудиодрамы</h3>
+                    <p data-i18n="service4.text">Полноценные постановки с несколькими актёрами, звуковыми эффектами и музыкой.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Почему мы -->
+    <section class="section why-us">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="why.title">Почему с нами стоит работать</h2>
+            </div>
+            
+            <div class="why-content">
+                <div class="why-item">
+                    <div class="why-number">01</div>
+                    <div class="why-text">
+                        <h3 data-i18n="why1.title">Оплата за работу</h3>
+                        <p data-i18n="why1.text">Мы ценим труд чтецов и гарантируем оплату за выполненную работу. Никакой работы "за спасибо".</p>
+                    </div>
+                </div>
+                
+                <div class="why-item">
+                    <div class="why-number">02</div>
+                    <div class="why-text">
+                        <h3 data-i18n="why2.title">Профессиональный подход</h3>
+                        <p data-i18n="why2.text">Работаем по чёткому плану, соблюдаем сроки, обеспечиваем качественный результат.</p>
+                    </div>
+                </div>
+                
+                <div class="why-item">
+                    <div class="why-number">03</div>
+                    <div class="why-text">
+                        <h3 data-i18n="why3.title">Открытость к сотрудничеству</h3>
+                        <p data-i18n="why3.text">Ищем долгосрочных партнёров среди команд озвучки и талантливых чтецов.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title" data-i18n="cta.title">Готовы обсудить сотрудничество?</h2>
+                <p class="cta-subtitle" data-i18n="cta.subtitle">Напишите нам в Telegram для обсуждения деталей</p>
+                <a href="https://t.me/Bezmatex_bot" class="btn btn-telegram" target="_blank">
+                    <i class="fab fa-telegram"></i>
+                    <span data-i18n="cta.button">Написать в Telegram</span>
+                </a>
+                <p class="cta-note" data-i18n="cta.note">Отвечаем в течение 24 часов. Все обсуждения — только через Telegram.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-logo">
+                        <div class="logo-icon">BC</div>
+                        <div class="footer-logo-text">
+                            <div class="logo-main" data-i18n="site.name">Common Airwave</div>
+                            <div class="logo-sub" data-i18n="site.tagline">команда озвучки</div>
+                        </div>
+                    </div>
+                    
+                    <p class="footer-description" data-i18n="footer.description">
+                        Профессиональная озвучка проектов с оплатой за работу.<br>
+                        Открыты к сотрудничеству с командами и чтецами.
+                    </p>
+                    
+                    <div class="footer-contact">
+                        <a href="https://t.me/Bezmatex_bot" class="contact-link" target="_blank">
+                            <i class="fab fa-telegram"></i>
+                            <span data-i18n="footer.contact">@Bezmatex_bot</span>
+                        </a>
+                        <p class="contact-note" data-i18n="footer.contactNote">Единственный способ связи — Telegram</p>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4 class="link-title" data-i18n="footer.nav">Навигация</h4>
+                        <a href="index.html" class="footer-link" data-i18n="nav.home">Главная</a>
+                        <a href="projects.html" class="footer-link" data-i18n="nav.projects">Проекты</a>
+                        <a href="partners.html" class="footer-link" data-i18n="nav.partners">Сотрудничество</a>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4 class="link-title" data-i18n="footer.team">Команда</h4>
+                        <a href="#about" class="footer-link" data-i18n="footer.about">О нас</a>
+                        <a href="#services" class="footer-link" data-i18n="footer.services">Услуги</a>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4 class="link-title" data-i18n="footer.projects">Проекты</h4>
+                        <a href="player.html?project=hazbin&episode=1" class="footer-link" data-i18n="project.hazbin">Отель Хазбин</a>
+                        <a href="player.html?project=helluva&episode=1" class="footer-link" data-i18n="project.helluva">Адский Управляющий</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright" data-i18n="footer.copyright">© 2023 Common Airwave. Все права защищены.</p>
+                <p class="footer-note" data-i18n="footer.note">Проект находится в активной стадии развития. Присоединяйтесь к нашему становлению.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="translations.js"></script>
+    <script src="language.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

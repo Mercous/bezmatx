@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Плеер — Common Airwave</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="player-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎧</text></svg>">
+</head>
+<body class="player-page">
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">BC</div>
+                    <div class="logo-text">
+                        <div class="logo-main" data-i18n="site.name">Common Airwave</div>
+                        <div class="logo-sub" data-i18n="site.tagline">команда озвучки</div>
+                    </div>
+                </a>
+                
+                <div class="nav-menu">
+                    <a href="index.html" class="nav-link" data-i18n="nav.home">Главная</a>
+                    <a href="projects.html" class="nav-link" data-i18n="nav.projects">Проекты</a>
+                    <a href="partners.html" class="nav-link" data-i18n="nav.partners">Сотрудничество</a>
+                </div>
+                
+                <div class="nav-actions">
+                    <div class="language-switcher">
+                        <button class="language-btn" data-lang="ru">RU</button>
+                        <button class="language-btn" data-lang="en">EN</button>
+                    </div>
+                    
+                    <a href="projects.html" class="telegram-btn">
+                        <i class="fas fa-arrow-left"></i>
+                        <span data-i18n="nav.back">К проектам</span>
+                    </a>
+                </div>
+                
+                <button class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <main class="player-main">
+        <div class="container">
+            <div class="player-container">
+                <!-- Основной плеер -->
+                <div class="player-main-section">
+                    <!-- Заголовок и навигация -->
+                    <div class="player-header">
+                        <div class="player-breadcrumbs">
+                            <a href="projects.html" class="breadcrumb-link">
+                                <i class="fas fa-arrow-left"></i>
+                                <span data-i18n="nav.back">Назад к проектам</span>
+                            </a>
+                            <span class="breadcrumb-separator">/</span>
+                            <span class="breadcrumb-project" id="project-name-breadcrumb">Отель Хазбин</span>
+                        </div>
+                        
+                        <div class="player-title-section">
+                            <h1 class="player-episode-title" id="player-episode-title">Ангельское нападение</h1>
+                            <div class="player-episode-info">
+                                <span class="episode-duration" id="episode-duration">28:42</span>
+                                <span class="episode-date" id="episode-date">Март 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- VK Video Player -->
+                    <div class="vk-video-player-container">
+                        <div class="vk-video-wrapper">
+                            <div class="vk-video-loading" id="vk-video-loading">
+                                <div class="loading-spinner">
+                                    <i class="fas fa-spinner fa-spin"></i>
+                                </div>
+                                <p>Загрузка видео...</p>
+                            </div>
+                            <div class="vk-video-embed" id="vk-video-embed"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Описание серии -->
+                    <div class="episode-description">
+                        <h3 data-i18n="player.episodeDescription">Описание серии</h3>
+                        <p id="episode-description-text">Отель подвергается атаке ангелов-истребителей, что ставит под угрозу всё предприятие Шарли. Жильцы вынуждены защищать свой новый дом от небесных захватчиков.</p>
+                        
+                        <div class="episode-meta-info">
+                            <div class="meta-item">
+                                <i class="fas fa-microphone"></i>
+                                <span data-i18n="player.voiceOver">Озвучка: Common Airwave</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-language"></i>
+                                <span data-i18n="player.language">Язык: Русский</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-closed-captioning"></i>
+                                <span data-i18n="player.subtitles">Субтитры: Нет</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Навигация по сериям -->
+                    <div class="episode-navigation">
+                        <button class="nav-btn prev-episode" id="prev-episode-btn">
+                            <i class="fas fa-chevron-left"></i>
+                            <div class="nav-btn-text">
+                                <span class="nav-btn-label" data-i18n="player.previous">Предыдущая</span>
+                                <span class="nav-btn-title" id="prev-episode-title">Пилотная серия</span>
+                            </div>
+                        </button>
+                        
+                        <button class="nav-btn next-episode" id="next-episode-btn">
+                            <div class="nav-btn-text">
+                                <span class="nav-btn-label" data-i18n="player.next">Следующая</span>
+                                <span class="nav-btn-title" id="next-episode-title">Новые жильцы</span>
+                            </div>
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Сайдбар -->
+                <div class="player-sidebar">
+                    <!-- Информация о проекте -->
+                    <div class="project-info-sidebar">
+                        <div class="project-header-sidebar">
+                            <h3 id="project-title-sidebar">Отель Хазбин</h3>
+                            <span class="project-status">Завершён</span>
+                        </div>
+                        
+                        <div class="project-meta-sidebar">
+                            <div class="meta-item">
+                                <i class="fas fa-film"></i>
+                                <span>4 серии</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>2023</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-user-friends"></i>
+                                <span>8 чтецов</span>
+                            </div>
+                        </div>
+                        
+                        <p class="project-description-sidebar" id="project-description-sidebar">
+                            Мюзикл-анимация о дочери Люцифера, Шарли, которая пытается перевоспитать грешников в своём отеле для давания им второго шанса попасть в Рай.
+                        </p>
+                        
+                        <div class="project-actions-sidebar">
+                            <a href="projects.html" class="btn btn-secondary">
+                                <i class="fas fa-list"></i>
+                                <span data-i18n="player.allProjects">Все проекты</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Список серий -->
+                    <div class="episodes-sidebar">
+                        <div class="episodes-header">
+                            <h3 data-i18n="player.episodes">Список серий</h3>
+                            <span class="episodes-count" id="episodes-count">4 серии</span>
+                        </div>
+                        
+                        <div class="episodes-list-scroll" id="episodes-list">
+                            <!-- Серии будут добавлены через JavaScript -->
+                            <!-- Статическая разметка для SEO -->
+                            <a href="player.html?project=hazbin&episode=1" class="episode-item-sidebar">
+                                <div class="episode-number-sidebar">1</div>
+                                <div class="episode-info-sidebar">
+                                    <h4>Пилотная серия</h4>
+                                    <p>Знакомство с Шарли и её отелем для перевоспитания грешников</p>
+                                </div>
+                                <div class="episode-duration-sidebar">32:15</div>
+                            </a>
+                            <a href="player.html?project=hazbin&episode=2" class="episode-item-sidebar active">
+                                <div class="episode-number-sidebar">2</div>
+                                <div class="episode-info-sidebar">
+                                    <h4>Ангельское нападение</h4>
+                                    <p>Отель подвергается атаке ангелов-истребителей</p>
+                                </div>
+                                <div class="episode-duration-sidebar">28:42</div>
+                            </a>
+                            <a href="player.html?project=hazbin&episode=3" class="episode-item-sidebar">
+                                <div class="episode-number-sidebar">3</div>
+                                <div class="episode-info-sidebar">
+                                    <h4>Новые жильцы</h4>
+                                    <p>В отеле появляются новые постояльцы</p>
+                                </div>
+                                <div class="episode-duration-sidebar">26:18</div>
+                            </a>
+                            <a href="player.html?project=hazbin&episode=4" class="episode-item-sidebar">
+                                <div class="episode-number-sidebar">4</div>
+                                <div class="episode-info-sidebar">
+                                    <h4>Музыкальный номер</h4>
+                                    <p>Шарли готовит большой музыкальный спектакль</p>
+                                </div>
+                                <div class="episode-duration-sidebar">30:05</div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Информация о команде -->
+                    <div class="team-info-sidebar">
+                        <h4>Команда озвучки</h4>
+                        <p>Озвучка выполнена командой Common Airwave с использованием профессионального оборудования и участием опытных чтецов.</p>
+                        <a href="partners.html" class="team-link">
+                            <i class="fas fa-users"></i>
+                            <span data-i18n="player.joinTeam">Присоединиться к команде</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-logo">
+                        <div class="logo-icon">BC</div>
+                        <div class="footer-logo-text">
+                            <div class="logo-main" data-i18n="site.name">Common Airwave</div>
+                            <div class="logo-sub" data-i18n="site.tagline">команда озвучки</div>
+                        </div>
+                    </div>
+                    
+                    <p class="footer-description" data-i18n="footer.description">
+                        Профессиональная озвучка проектов с оплатой за работу.<br>
+                        Открыты к сотрудничеству с командами и чтецами.
+                    </p>
+                    
+                    <div class="footer-contact">
+                        <a href="https://t.me/Bezmatex_bot" class="contact-link" target="_blank">
+                            <i class="fab fa-telegram"></i>
+                            <span data-i18n="footer.contact">@Bezmatex_bot</span>
+                        </a>
+                        <p class="contact-note" data-i18n="footer.contactNote">Единственный способ связи — Telegram</p>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4 class="link-title" data-i18n="footer.nav">Навигация</h4>
+                        <a href="index.html" class="footer-link" data-i18n="nav.home">Главная</a>
+                        <a href="projects.html" class="footer-link" data-i18n="nav.projects">Проекты</a>
+                        <a href="partners.html" class="footer-link" data-i18n="nav.partners">Сотрудничество</a>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4 class="link-title" data-i18n="footer.team">Команда</h4>
+                        <a href="index.html#about" class="footer-link" data-i18n="footer.about">О нас</a>
+                        <a href="index.html#services" class="footer-link" data-i18n="footer.services">Услуги</a>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4 class="link-title" data-i18n="footer.projects">Популярные проекты</h4>
+                        <a href="player.html?project=hazbin&episode=1" class="footer-link" data-i18n="project.hazbin">Отель Хазбин</a>
+                        <a href="player.html?project=helluva&episode=1" class="footer-link" data-i18n="project.helluva">Адский Управляющий</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright" data-i18n="footer.copyright">© 2023 Common Airwave. Все права защищены.</p>
+                <p class="footer-note" data-i18n="footer.note">Проект находится в активной стадии развития. Присоединяйтесь к нашему становлению.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="translations.js"></script>
+    <script src="language.js"></script>
+    <script src="script.js"></script>
+    <script src="player-script.js"></script>
+</body>
+</html>

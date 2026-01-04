@@ -1,0 +1,1137 @@
+
+.player-page {
+    background-color: var(--light);
+}
+
+.player-main {
+    padding: 100px 0 40px;
+}
+
+.player-container {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 24px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Основная секция плеера */
+.player-main-section {
+    background-color: var(--white);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--gray);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+/* Заголовок плеера - УПРОЩЕННЫЙ спец*/
+.player-header {
+    padding: 18px 24px 16px;
+    border-bottom: 1px solid var(--gray-light);
+}
+
+.player-breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    font-size: 12px;
+}
+
+.breadcrumb-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--gray-dark);
+    text-decoration: none;
+    transition: color 0.2s;
+    font-weight: 500;
+}
+
+.breadcrumb-link:hover {
+    color: var(--black);
+}
+
+.breadcrumb-link i {
+    font-size: 11px;
+}
+
+.breadcrumb-separator {
+    color: var(--gray-medium);
+}
+
+.breadcrumb-project {
+    color: var(--black);
+    font-weight: 500;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.player-title-section {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.player-episode-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--black);
+    line-height: 1.3;
+    margin: 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+.player-episode-info {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    font-size: 13px;
+    color: var(--gray-dark);
+    flex-wrap: wrap;
+}
+
+.player-episode-info span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+.player-episode-info span:not(:last-child)::after {
+    display: none;
+}
+
+
+.episode-number {
+    display: none !important;
+}
+
+.episode-duration,
+.episode-date {
+    font-weight: 500;
+}
+
+/* VK Video Player - УВЕЛИЧЕННАЯ ВЫСОТА */
+.vk-video-player-container {
+    padding: 0;
+}
+
+.vk-video-wrapper {
+    position: relative;
+    width: 100%;
+    background-color: var(--black);
+    overflow: hidden;
+    
+    min-height: 650px;
+}
+
+.vk-video-wrapper iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 650px; 
+    border: none;
+    background-color: #000;
+}
+
+.vk-video-loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0.95));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    z-index: 1;
+    min-height: 650px;
+}
+
+.loading-spinner {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: var(--white);
+}
+
+.vk-video-loading p {
+    font-size: 16px;
+    color: var(--gray-light);
+}
+
+.vk-video-embed {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+/* Описание серии */
+.episode-description {
+    padding: 20px 24px;
+    border-top: 1px solid var(--gray-light);
+}
+
+.episode-description h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: var(--black);
+    font-weight: 600;
+}
+
+.episode-description p {
+    color: var(--gray-dark);
+    line-height: 1.6;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.episode-meta-info {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding-top: 15px;
+    border-top: 1px solid var(--gray-light);
+}
+
+.episode-meta-info .meta-item {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 12px;
+    color: var(--gray-dark);
+}
+
+.episode-meta-info .meta-item i {
+    color: var(--black);
+    font-size: 13px;
+}
+
+/* Навигация по сериям */
+.episode-navigation {
+    padding: 0 24px 24px;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.nav-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 18px;
+    background-color: var(--light);
+    border: 1px solid var(--gray);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+    border: none;
+}
+
+.nav-btn:hover {
+    background-color: var(--white);
+    border-color: var(--black);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+.nav-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.nav-btn:disabled:hover {
+    background-color: var(--light);
+    transform: none;
+    box-shadow: none;
+}
+
+.nav-btn.prev-episode {
+    justify-content: flex-start;
+}
+
+.nav-btn.next-episode {
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.nav-btn i {
+    color: var(--gray-dark);
+    font-size: 16px;
+}
+
+.nav-btn-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.nav-btn-label {
+    font-size: 11px;
+    color: var(--gray-dark);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-btn-title {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--black);
+    line-height: 1.4;
+    max-width: 180px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Сайдбар плеера */
+.player-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.project-info-sidebar {
+    background-color: var(--white);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--gray);
+    padding: 20px;
+    box-shadow: var(--shadow);
+}
+
+.project-header-sidebar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.project-header-sidebar h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--black);
+    line-height: 1.3;
+    flex: 1;
+    margin-right: 12px;
+}
+
+.project-status {
+    font-size: 10px;
+    padding: 3px 6px;
+    background-color: var(--light);
+    color: var(--gray-dark);
+    border-radius: var(--radius-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.project-meta-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.project-meta-sidebar .meta-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--gray-dark);
+}
+
+.project-meta-sidebar .meta-item i {
+    color: var(--black);
+    width: 14px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.project-description-sidebar {
+    font-size: 12px;
+    color: var(--gray-dark);
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.project-actions-sidebar .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 16px;
+    font-size: 13px;
+}
+
+/* Список серий в сайдбаре */
+.episodes-sidebar {
+    background-color: var(--white);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--gray);
+    padding: 20px;
+    box-shadow: var(--shadow);
+    flex-grow: 1;
+}
+
+.episodes-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.episodes-header h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--black);
+}
+
+.episodes-count {
+    font-size: 11px;
+    color: var(--gray-dark);
+    background-color: var(--light);
+    padding: 3px 8px;
+    border-radius: var(--radius-sm);
+}
+
+.episodes-list-scroll {
+    max-height: 380px;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+.episode-item-sidebar {
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    border: 1px solid var(--gray);
+    border-radius: var(--radius-sm);
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    background-color: var(--light);
+    text-decoration: none;
+    color: inherit;
+}
+
+.episode-item-sidebar:hover {
+    background-color: var(--white);
+    border-color: var(--gray-dark);
+    transform: translateX(3px);
+}
+
+.episode-item-sidebar.active {
+    border-color: var(--black);
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.episode-number-sidebar {
+    width: 26px;
+    height: 26px;
+    background-color: var(--white);
+    border: 1px solid var(--gray);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.episode-item-sidebar.active .episode-number-sidebar {
+    background-color: var(--white);
+    color: var(--black);
+    border-color: var(--white);
+}
+
+.episode-info-sidebar {
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.episode-info-sidebar h4 {
+    font-size: 13px;
+    margin-bottom: 3px;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.episode-info-sidebar p {
+    font-size: 10px;
+    color: var(--gray-dark);
+    line-height: 1.3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.episode-item-sidebar.active .episode-info-sidebar p {
+    color: var(--gray-light);
+}
+
+.episode-duration-sidebar {
+    font-size: 10px;
+    color: var(--gray-medium);
+    font-family: monospace;
+    margin-left: 8px;
+    flex-shrink: 0;
+}
+
+.episode-item-sidebar.active .episode-duration-sidebar {
+    color: var(--gray-light);
+}
+
+/* Информация о команде */
+.team-info-sidebar {
+    background-color: var(--white);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--gray);
+    padding: 20px;
+    box-shadow: var(--shadow);
+}
+
+.team-info-sidebar h4 {
+    font-size: 15px;
+    margin-bottom: 12px;
+    color: var(--black);
+    font-weight: 600;
+}
+
+.team-info-sidebar p {
+    font-size: 12px;
+    color: var(--gray-dark);
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.team-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--black);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.team-link:hover {
+    color: var(--gray-dark);
+}
+
+.team-link i {
+    font-size: 13px;
+}
+
+/* Уведомления */
+.player-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--black);
+    color: var(--white);
+    padding: 10px 16px;
+    border-radius: var(--radius-sm);
+    font-size: 12px;
+    z-index: 9998;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    max-width: 280px;
+}
+
+/* Кнопка "Наверх" */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--black);
+    color: var(--white);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow);
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 1200px) {
+    .player-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .vk-video-wrapper iframe {
+        min-height: 600px; /* Увеличен для планш */
+    }
+    
+    .vk-video-wrapper {
+        min-height: 600px;
+    }
+    
+    .vk-video-loading {
+        min-height: 600px;
+    }
+}
+
+@media (max-width: 992px) {
+    .player-main {
+        padding: 90px 0 35px;
+    }
+    
+    .player-header {
+        padding: 16px 20px 14px;
+    }
+    
+    .player-episode-title {
+        font-size: 22px;
+    }
+    
+    .vk-video-wrapper iframe {
+        min-height: 550px; /* Увеличено */
+    }
+    
+    .vk-video-wrapper {
+        min-height: 550px;
+    }
+    
+    .vk-video-loading {
+        min-height: 550px;
+    }
+}
+
+@media (max-width: 768px) {
+    .player-main {
+        padding: 80px 0 30px;
+    }
+    
+    .player-container {
+        gap: 16px;
+    }
+    
+    .player-header {
+        padding: 14px 16px 12px;
+    }
+    
+    .player-breadcrumbs {
+        margin-bottom: 12px;
+        font-size: 11px;
+    }
+    
+    .breadcrumb-project {
+        max-width: 160px;
+    }
+    
+    .player-episode-title {
+        font-size: 20px;
+        line-height: 1.2;
+    }
+    
+    .player-episode-info {
+        gap: 12px;
+        font-size: 12px;
+        flex-wrap: nowrap;
+    }
+    
+    
+    .player-episode-info span {
+        white-space: nowrap;
+    }
+    
+    .vk-video-wrapper {
+        min-height: 450px; 
+        aspect-ratio: 16/9;
+    }
+    
+    .vk-video-wrapper iframe {
+        min-height: 450px; 
+    }
+    
+    .vk-video-loading {
+        min-height: 450px;
+    }
+    
+    .episode-description {
+        padding: 16px;
+    }
+    
+    .episode-description h3 {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    
+    .episode-description p {
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+    
+    .episode-meta-info {
+        gap: 12px;
+        padding-top: 12px;
+    }
+    
+    .episode-meta-info .meta-item {
+        font-size: 11px;
+    }
+    
+    .episode-navigation {
+        padding: 0 16px 16px;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .nav-btn {
+        padding: 14px 16px;
+        gap: 10px;
+    }
+    
+    .nav-btn-text {
+        gap: 2px;
+    }
+    
+    .nav-btn-label {
+        font-size: 10px;
+    }
+    
+    .nav-btn-title {
+        font-size: 12px;
+        max-width: none;
+    }
+    
+    .project-info-sidebar,
+    .episodes-sidebar,
+    .team-info-sidebar {
+        padding: 16px;
+    }
+    
+    .project-header-sidebar h3 {
+        font-size: 16px;
+    }
+    
+    .episodes-header h3 {
+        font-size: 15px;
+    }
+    
+    .team-info-sidebar h4 {
+        font-size: 14px;
+    }
+    
+    .back-to-top {
+        width: 44px;
+        height: 44px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 576px) {
+    .player-main {
+        padding: 70px 0 25px;
+    }
+    
+    .player-header {
+        padding: 12px 14px 10px;
+    }
+    
+    .player-breadcrumbs {
+        margin-bottom: 10px;
+        font-size: 10px;
+    }
+    
+    .breadcrumb-link i {
+        font-size: 10px;
+    }
+    
+    .breadcrumb-project {
+        max-width: 130px;
+    }
+    
+    .player-episode-title {
+        font-size: 18px;
+        line-height: 1.2;
+    }
+    
+    .player-episode-info {
+        font-size: 11px;
+        gap: 10px;
+    }
+    
+    .vk-video-wrapper {
+        min-height: 400px; /* Увеличено */
+    }
+    
+    .vk-video-wrapper iframe {
+        min-height: 400px; /* Увеличено */
+    }
+    
+    .vk-video-loading {
+        min-height: 400px;
+    }
+    
+    .vk-video-loading {
+        padding: 0 16px;
+    }
+    
+    .loading-spinner {
+        font-size: 32px;
+        margin-bottom: 12px;
+    }
+    
+    .vk-video-loading p {
+        font-size: 14px;
+    }
+    
+    .episode-description {
+        padding: 14px;
+    }
+    
+    .episode-description p {
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
+    
+    .episode-meta-info {
+        flex-direction: column;
+        gap: 8px;
+        padding-top: 10px;
+    }
+    
+    .episode-navigation {
+        padding: 0 14px 14px;
+    }
+    
+    .nav-btn {
+        padding: 12px 14px;
+    }
+    
+    .nav-btn i {
+        font-size: 14px;
+    }
+    
+    .nav-btn-title {
+        font-size: 11px;
+    }
+    
+    .project-info-sidebar,
+    .episodes-sidebar,
+    .team-info-sidebar {
+        padding: 14px;
+    }
+    
+    .episode-item-sidebar {
+        padding: 8px 10px;
+        margin-bottom: 6px;
+    }
+    
+    .episode-number-sidebar {
+        width: 24px;
+        height: 24px;
+        font-size: 10px;
+        margin-right: 10px;
+    }
+    
+    .episode-info-sidebar h4 {
+        font-size: 12px;
+    }
+    
+    .episode-info-sidebar p {
+        font-size: 9px;
+    }
+    
+    .episode-duration-sidebar {
+        font-size: 9px;
+    }
+    
+    .back-to-top {
+        width: 40px;
+        height: 40px;
+        bottom: 16px;
+        right: 16px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .player-main {
+        padding: 60px 0 20px;
+    }
+    
+    .player-header {
+        padding: 10px 12px 8px;
+    }
+    
+    .player-breadcrumbs {
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-bottom: 8px;
+    }
+    
+    .breadcrumb-separator {
+        display: none;
+    }
+    
+    .breadcrumb-project {
+        max-width: 120px;
+        font-size: 11px;
+    }
+    
+    .player-episode-title {
+        font-size: 16px;
+    }
+    
+    .player-episode-info {
+        font-size: 10px;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+    
+    /* Для очень маленьких экранов скрываем дату, оставляем только длительность */
+    .episode-date {
+        display: none;
+    }
+    
+    .vk-video-wrapper {
+        min-height: 350px; /* Увеличено */
+    }
+    
+    .vk-video-wrapper iframe {
+        min-height: 350px; /* Увеличено */
+    }
+    
+    .vk-video-loading {
+        min-height: 350px;
+    }
+    
+    .episode-description {
+        padding: 12px;
+    }
+    
+    .episode-description h3 {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+    
+    .episode-description p {
+        font-size: 11px;
+    }
+    
+    .nav-btn {
+        padding: 10px 12px;
+    }
+    
+    .nav-btn-label {
+        font-size: 9px;
+    }
+    
+    .nav-btn-title {
+        font-size: 10px;
+    }
+    
+    .project-info-sidebar,
+    .episodes-sidebar,
+    .team-info-sidebar {
+        padding: 12px;
+    }
+    
+    .project-header-sidebar h3 {
+        font-size: 15px;
+    }
+    
+    .episodes-header h3 {
+        font-size: 14px;
+    }
+    
+    .episodes-count {
+        font-size: 10px;
+    }
+    
+    .episode-item-sidebar {
+        padding: 6px 8px;
+    }
+    
+    .episode-number-sidebar {
+        width: 22px;
+        height: 22px;
+        font-size: 9px;
+        margin-right: 8px;
+    }
+    
+    .episode-info-sidebar h4 {
+        font-size: 11px;
+    }
+    
+    .back-to-top {
+        width: 36px;
+        height: 36px;
+        bottom: 12px;
+        right: 12px;
+        font-size: 14px;
+    }
+}
+
+/* Для очень маленьких экранов (iPhone SE и подобные штуки которыми я не пользуюсь) */
+@media (max-width: 360px) {
+    .player-episode-title {
+        font-size: 15px;
+    }
+    
+    .vk-video-wrapper {
+        min-height: 300px; /* Увеличено */
+    }
+    
+    .vk-video-wrapper iframe {
+        min-height: 300px; /* Увеличено */
+    }
+    
+    .vk-video-loading {
+        min-height: 300px;
+    }
+    
+    .breadcrumb-link span {
+        display: none;
+    }
+    
+    .breadcrumb-link i {
+        margin-right: 0;
+    }
+    
+    .breadcrumb-project {
+        max-width: 100px;
+        font-size: 10px;
+    }
+    
+    .nav-btn {
+        padding: 8px 10px;
+    }
+    
+    .nav-btn-text {
+        gap: 1px;
+    }
+    
+    .nav-btn-label {
+        font-size: 8px;
+    }
+    
+    .nav-btn-title {
+        font-size: 9px;
+    }
+    
+    .episodes-list-scroll {
+        max-height: 280px;
+    }
+    
+    .back-to-top {
+        width: 32px;
+        height: 32px;
+        bottom: 10px;
+        right: 10px;
+        font-size: 12px;
+    }
+}
+
+/* Ландшафтная ориентация */
+@media (max-width: 768px) and (orientation: landscape) {
+    .player-main {
+        padding: 70px 0 25px;
+    }
+    
+    .vk-video-wrapper {
+        min-height: 400px; /* Увеличено для ландшафта */
+    }
+    
+    .vk-video-wrapper iframe {
+        min-height: 400px;
+    }
+    
+    .vk-video-loading {
+        min-height: 400px;
+    }
+    
+    .player-container {
+        grid-template-columns: 1fr 280px;
+        gap: 16px;
+    }
+    
+    .episode-navigation {
+        flex-direction: row;
+    }
+}
+
+/* Ошибка видео */
+.video-error {
+    text-align: center;
+    color: var(--white);
+    padding: 30px 16px;
+    min-height: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-error i {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: #ff6b6b;
+}
+
+.video-error h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: var(--white);
+}
+
+.video-error p {
+    font-size: 13px;
+    color: var(--gray-light);
+    margin-bottom: 16px;
+}
+
+.retry-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    background-color: var(--white);
+    color: var(--black);
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.retry-button:hover {
+    background-color: var(--gray-light);
+}
+[file content end]

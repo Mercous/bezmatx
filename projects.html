@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проекты — Common Airwave</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="projects-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎧</text></svg>">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">BC</div>
+                    <div class="logo-text">
+                        <div class="logo-main" data-i18n="site.name">Common Airwave</div>
+                        <div class="logo-sub" data-i18n="site.tagline">команда озвучки</div>
+                    </div>
+                </a>
+                
+                <div class="nav-menu">
+                    <a href="index.html" class="nav-link" data-i18n="nav.home">Главная</a>
+                    <a href="projects.html" class="nav-link active" data-i18n="nav.projects">Проекты</a>
+                    <a href="partners.html" class="nav-link" data-i18n="nav.partners">Сотрудничество</a>
+                </div>
+                
+                <div class="nav-actions">
+                    <div class="language-switcher">
+                        <button class="language-btn" data-lang="ru">RU</button>
+                        <button class="language-btn" data-lang="en">EN</button>
+                    </div>
+                    
+                    <a href="https://t.me/Bezmatex_bot" class="telegram-btn" target="_blank">
+                        <i class="fab fa-telegram"></i>
+                        <span data-i18n="nav.telegram">Telegram</span>
+                    </a>
+                </div>
+                
+                <button class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Заголовок -->
+    <header class="page-header">
+        <div class="container">
+            <h1 class="page-title" data-i18n="projects.title">Наши проекты</h1>
+            <p class="page-subtitle" data-i18n="projects.subtitle">Коллекция озвученных работ команды Common Airwave</p>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="projects-main">
+        <div class="container">
+            <!-- Фильтры -->
+            <div class="projects-filters">
+                <button class="filter-btn active" data-filter="all" data-i18n="filter.all">Все проекты</button>
+                <button class="filter-btn" data-filter="animation" data-i18n="filter.animation">Анимация</button>
+                <button class="filter-btn" data-filter="fanfic" data-i18n="filter.fanfic">Фанфики</button>
+                <button class="filter-btn" data-filter="original" data-i18n="filter.original">Оригинальные</button>
+            </div>
+            
+            <!-- Список проектов -->
+            <div class="projects-container">
+                <!-- Проект 1: Отель Хазбин -->
+                <div class="project-item" data-category="animation">
+                    <div class="project-header">
+                        <div class="project-header-content">
+                            <h2 class="project-title" data-i18n="project.hazbin">Отель Хазбин (Hazbin Hotel)</h2>
+                            <div class="project-meta">
+                                <span class="project-genre" data-i18n="genre.animation">Анимация, Мюзикл</span>
+                                <span class="project-episodes"><i class="fas fa-film"></i> 8 серий</span>
+                                <span class="project-year"><i class="fas fa-calendar"></i> 2023-2024</span>
+                            </div>
+                        </div>
+                        <button class="project-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="project-content">
+                        <p class="project-description" data-i18n="project.hazbin.description">Мюзикл-анимация о дочери Люцифера, Шарли, которая пытается перевоспитать грешников в своём отеле для давания им второго шанса попасть в Рай.</p>
+                        
+                        <div class="project-stats">
+                            <div class="project-stat">
+                                <i class="fas fa-user-friends"></i>
+                                <span>12 чтецов</span>
+                            </div>
+                            <div class="project-stat">
+                                <i class="fas fa-check-circle"></i>
+                                <span data-i18n="status.completed">Завершён</span>
+                            </div>
+                        </div>
+                        
+                        <div class="episodes-list">
+                            <h3>Список серий:</h3>
+                            <a href="player.html?project=hazbin&episode=1" class="episode-item">
+                                <div class="episode-info">
+                                    <span class="episode-number">01</span>
+                                    <div class="episode-details">
+                                        <h4 data-i18n="episode1.title">Пилотная серия</h4>
+                                        <p data-i18n="episode1.desc">Знакомство с Шарли и её отелем для перевоспитания грешников</p>
+                                    </div>
+                                </div>
+                                <div class="episode-actions">
+                                    <span class="episode-duration">32 мин</span>
+                                    <span class="episode-play">
+                                        <i class="fas fa-play"></i>
+                                    </span>
+                                </div>
+                            </a>
+                            
+                            <a href="player.html?project=hazbin&episode=2" class="episode-item">
+                                <div class="episode-info">
+                                    <span class="episode-number">02</span>
+                                    <div class="episode-details">
+                                        <h4 data-i18n="episode2.title">Ангельское нападение</h4>
+                                        <p data-i18n="episode2.desc">Отель подвергается атаке ангелов-истребителей</p>
+                                    </div>
+                                </div>
+                                <div class="episode-actions">
+                                    <span class="episode-duration">28 мин</span>
+                                    <span class="episode-play">
+                                        <i class="fas fa-play"></i>
+                                    </span>
+                                </div>
+                            </a>
+                            
+                            <a href="player.html?project=hazbin&episode=3" class="episode-item">
+                                <div class="episode-info">
+                                    <span class="episode-number">03</span>
+                                    <div class="episode-details">
+                                        <h4 data-i18n="episode3.title">Новые жильцы</h4>
+                                        <p data-i18n="episode3.desc">В отеле появляются новые постояльцы</p>
+                                    </div>
+                                </div>
+                                <div class="episode-actions">
+                                    <span class="episode-duration">26 мин</span>
+                                    <span class="episode-play">
+                                        <i class="fas fa-play"></i>
+                                    </span>
+                                </div>
+                            </a>
+                            
+                            <a href="player.html?project=hazbin&episode=4" class="episode-item">
+                                <div class="episode-info">
+                                    <span class="episode-number">04</span>
+                                    <div class="episode-details">
+                                        <h4 data-i18n="episode4.title">Музыкальный номер</h4>
+                                        <p data-i18n="episode4.desc">Шарли готовит большой музыкальный спектакль</p>
+                                    </div>
+                                </div>
+                                <div class="episode-actions">
+                                    <span class="episode-duration">30 мин</span>
+                                    <span class="episode-play">
+                                        <i class="fas fa-play"></i>
+                                    </span>
+                                </div>
+                            </a>
+                            
+                            <a href="player.html?project=hazbin&episode=5" class="episode-item">
+                                <div class="episode-info">
+                                    <span class="episode-number">05</span>
+                                    <div class="episode-details">
+                                        <h4>Визит отца</h4>
+                                        <p>Люцифер навещает дочь в её отеле</p>
+                                    </div>
+                                </div>
+                                <div class="episode-actions">
+                                    <span class="episode-duration">29 мин</span>
+                                    <span class="episode-play">
+                                        <i class="fas fa-play"></i>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <a href="player.html?project=hazbin&episode=1" class="btn btn-primary">
+                                <i class="fas fa-play"></i>
+                                <span data-i18n="project.view">Начать просмотр</span>
+                            </a>
+                            <a href="player.html?project=hazbin&episode=1" class="btn btn-secondary">
+                                <i class="fas fa-info-circle"></i>
+                                <span data-i18n="project.details">Подробнее</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Проект 2: Адский Управляющий -->
+                <div class="project-item" data-category="animation">
+                    <div class="project-header">
+                        <div class="project-header-content">
+                            <h2 class="project-title" data-i18n="project.helluva">Адский Управляющий (Helluva Boss)</h2>
+                            <div class="project-meta">
+                                <span class="project-genre" data-i18n="genre.comedy">Комедия, Фэнтези</span>
+                                <span class="project-episodes"><i class="fas fa-film"></i> 5 серий</span>
+                                <span class="project-year"><i class="fas fa-calendar"></i> 2024</span>
+                            </div>
+                        </div>
+                        <button class="project-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="project-content">
+                        <p class="project-description" data-i18n="project.helluva.description">Анимационный сериал о компании убийц в Аду, которые выполняют заказы от живых людей, желающих отомстить своим врагам.</p>
+                        
+                        <div class="project-stats">
+                            <div class="project-stat">
+                                <i class="fas fa-user-friends"></i>
+                                <span>10 чтецов</span>
+                            </div>
+                            <div class="project-stat">
+                                <i class="fas fa-sync-alt"></i>
+                                <span data-i18n="status.inProgress">В процессе</span>
+                            </div>
+                        </div>
+                        
+                        <div class="episodes-list">
+                            <h3>Список серий:</h3>
+                            <a href="player.html?project=helluva&episode=1" class="episode-item">
+                                <div class="episode-info">
+                                    <span class="episode-number">01</span>
+                                    <div class="episode-details">
+                                        <h4>Пилот</h4>
+                                        <p>Знакомство с Блицо и его командой</p>
+                                    </div>
+                                </div>
+                                <div class="episode-actions">
+                                    <span class="episode-duration">22 мин</span>
+                                    <span class="episode-play">
+                                        <i class="fas fa-play"></i>
+                                    </span>
+                                </div>
+                            </a>
+                            
+                            <a href="player.html?project=helluva&episode=2" class="episode-item">
+                                <div class="episode-info">
+                                    <span class="episode-number">02</span>
+                                    <div class="episode-details">
+                                        <h4>Первое задание</h4>
+                                        <p>Команда получает свой первый заказ</p>
+                                    </div>
+                                </div>
+                                <div class="episode-actions">
+                                    <span class="episode-duration">24 мин</span>
+                                    <span class="episode-play">
+                                        <i class="fas fa-play"></i>
+                                    </span>
+                                </div>
+                            </a>
+                            
+                            <a href="player.html?project=helluva&episode=3" class="episode-item">
+                                <div class="episode-info">
+                                    <span class="episode-number">03</span>
+                                    <div class="episode-details">
+                                        <h4>Проблемы с клиентом</h4>
+                                        <p>Не всё идет по плану с новым клиентом</p>
+                                    </div>
+                                </div>
+                                <div class="episode-actions">
+                                    <span class="episode-duration">21 мин</span>
+                                    <span class="episode-play">
+                                        <i class="fas fa-play"></i>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <a href="player.html?project=helluva&episode=1" class="btn btn-primary">
+                                <i class="fas fa-play"></i>
+                                <span data-i18n="project.view">Начать просмотр</span>
+                            </a>
+                            <a href="player.html?project=helluva&episode=1" class="btn btn-secondary">
+                                <i class="fas fa-info-circle"></i>
+                                <span data-i18n="project.details">Подробнее</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Проект 3: Стражи Галактики -->
+                <div class="project-item" data-category="fanfic">
+                    <div class="project-header">
+                        <div class="project-header-content">
+                            <h2 class="project-title" data-i18n="project.guardians">Стражи Галактики: Новая Эра</h2>
+                            <div class="project-meta">
+                                <span class="project-genre" data-i18n="genre.fanfic">Фанфик, Научная фантастика</span>
+                                <span class="project-episodes"><i class="fas fa-film"></i> 6 серий</span>
+                                <span class="project-year"><i class="fas fa-calendar"></i> 2023</span>
+                            </div>
+                        </div>
+                        <button class="project-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="project-content">
+                        <p class="project-description" data-i18n="project.guardians.description">Фанфик по вселенной Marvel о приключениях Стражей Галактики после событий фильмов. Оригинальный сюжет с новыми персонажами.</p>
+                        
+                        <div class="project-stats">
+                            <div class="project-stat">
+                                <i class="fas fa-user-friends"></i>
+                                <span>8 чтецов</span>
+                            </div>
+                            <div class="project-stat">
+                                <i class="fas fa-check-circle"></i>
+                                <span data-i18n="status.completed">Завершён</span>
+                            </div>
+                        </div>
+                        
+                        <div class="episodes-list">
+                            <h3>Список серий:</h3>
+                            <a href="player.html?project=guardians&episode=1" class="episode-item">
+                                <div class="episode-info">
+                                    <span class="episode-number">01</span>
+                                    <div class="episode-details">
+                                        <h4>Возвращение</h4>
+                                        <p>Стражи возвращаются после долгого отсутствия</p>
+                                    </div>
+                                </div>
+                                <div class="episode-actions">
+                                    <span class="episode-duration">48 мин</span>
+                                    <span class="episode-play">
+                                        <i class="fas fa-play"></i>
+                                    </span>
+                                </div>
+                            </a>
+                            
+                            <a href="player.html?project=guardians&episode=2" class="episode-item">
+                                <div class="episode-info">
+                                    <span class="episode-number">02</span>
+                                    <div class="episode-details">
+                                        <h4>Новая угроза</h4>
+                                        <p>Появление нового врага галактического масштаба</p>
+                                    </div>
+                                </div>
+                                <div class="episode-actions">
+                                    <span class="episode-duration">52 мин</span>
+                                    <span class="episode-play">
+                                        <i class="fas fa-play"></i>
+                                    </span>
+                                </div>
+                            </a>
+                            
+                            <a href="player.html?project=guardians&episode=3" class="episode-item">
+                                <div class="episode-info">
+                                    <span class="episode-number">03</span>
+                                    <div class="episode-details">
+                                        <h4>Союзники</h4>
+                                        <p>Поиск новых союзников для борьбы с угрозой</p>
+                                    </div>
+                                </div>
+                                <div class="episode-actions">
+                                    <span class="episode-duration">46 мин</span>
+                                    <span class="episode-play">
+                                        <i class="fas fa-play"></i>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <a href="player.html?project=guardians&episode=1" class="btn btn-primary">
+                                <i class="fas fa-play"></i>
+                                <span data-i18n="project.view">Начать просмотр</span>
+                            </a>
+                            <a href="player.html?project=guardians&episode=1" class="btn btn-secondary">
+                                <i class="fas fa-info-circle"></i>
+                                <span data-i18n="project.details">Подробнее</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Проект 4: Оригинальная аудиодрама -->
+                <div class="project-item" data-category="original">
+                    <div class="project-header">
+                        <div class="project-header-content">
+                            <h2 class="project-title" data-i18n="project.voices">Голоса Бездны</h2>
+                            <div class="project-meta">
+                                <span class="project-genre" data-i18n="genre.original">Оригинальная аудиодрама, Хоррор</span>
+                                <span class="project-episodes"><i class="fas fa-film"></i> 10 серий (план)</span>
+                                <span class="project-year"><i class="fas fa-calendar"></i> 2024</span>
+                            </div>
+                        </div>
+                        <button class="project-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="project-content">
+                        <p class="project-description" data-i18n="project.voices.description">Оригинальная аудиодрама в жанре хоррор. История о группе исследователей, отправившихся в заброшенную научную станцию на дне океана.</p>
+                        
+                        <div class="project-stats">
+                            <div class="project-stat">
+                                <i class="fas fa-user-friends"></i>
+                                <span>15 чтецов (набор)</span>
+                            </div>
+                            <div class="project-stat">
+                                <i class="fas fa-clock"></i>
+                                <span data-i18n="status.inDevelopment">В разработке</span>
+                            </div>
+                        </div>
+                        
+                        <div class="project-notice">
+                            <div class="notice-icon">
+                                <i class="fas fa-info-circle"></i>
+                            </div>
+                            <div class="notice-content">
+                                <h4 data-i18n="notice.title">Проект в разработке</h4>
+                                <p data-i18n="notice.text">Набор чтецов открыт. Ожидайте релиз в конце 2024 года.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <button class="btn btn-secondary" disabled>
+                                <i class="fas fa-clock"></i>
+                                <span data-i18n="project.soon">Скоро</span>
+                            </button>
+                            <a href="partners.html" class="btn btn-secondary">
+                                <i class="fas fa-microphone"></i>
+                                <span data-i18n="project.participate">Участвовать</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-logo">
+                        <div class="logo-icon">BC</div>
+                        <div class="footer-logo-text">
+                            <div class="logo-main" data-i18n="site.name">Common Airwave</div>
+                            <div class="logo-sub" data-i18n="site.tagline">команда озвучки</div>
+                        </div>
+                    </div>
+                    
+                    <p class="footer-description" data-i18n="footer.description">
+                        Профессиональная озвучка проектов с оплатой за работу.<br>
+                        Открыты к сотрудничеству с командами и чтецами.
+                    </p>
+                    
+                    <div class="footer-contact">
+                        <a href="https://t.me/Bezmatex_bot" class="contact-link" target="_blank">
+                            <i class="fab fa-telegram"></i>
+                            <span data-i18n="footer.contact">@Bezmatex_bot</span>
+                        </a>
+                        <p class="contact-note" data-i18n="footer.contactNote">Единственный способ связи — Telegram</p>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4 class="link-title" data-i18n="footer.nav">Навигация</h4>
+                        <a href="index.html" class="footer-link" data-i18n="nav.home">Главная</a>
+                        <a href="projects.html" class="footer-link" data-i18n="nav.projects">Проекты</a>
+                        <a href="partners.html" class="footer-link" data-i18n="nav.partners">Сотрудничество</a>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4 class="link-title" data-i18n="footer.team">Команда</h4>
+                        <a href="index.html#about" class="footer-link" data-i18n="footer.about">О нас</a>
+                        <a href="index.html#services" class="footer-link" data-i18n="footer.services">Услуги</a>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4 class="link-title" data-i18n="footer.projects">Популярные проекты</h4>
+                        <a href="player.html?project=hazbin&episode=1" class="footer-link" data-i18n="project.hazbin">Отель Хазбин</a>
+                        <a href="player.html?project=helluva&episode=1" class="footer-link" data-i18n="project.helluva">Адский Управляющий</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright" data-i18n="footer.copyright">© 2023 Common Airwave. Все права защищены.</p>
+                <p class="footer-note" data-i18n="footer.note">Проект находится в активной стадии развития. Присоединяйтесь к нашему становлению.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="translations.js"></script>
+    <script src="language.js"></script>
+    <script src="script.js"></script>
+    <script src="projects-script.js"></script>
+</body>
+</html>
